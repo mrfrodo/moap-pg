@@ -5,7 +5,12 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: postgres
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/moap?ApplicationName=moap-pg
+    username: frodo
+    password: frodo123
+    hikari:
+      maximum-pool-size: 5
 
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
